@@ -1,0 +1,555 @@
+/*Body Styling*/
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  .other {
+    background-color: #FF9C4C;
+    margin: 25px;
+    padding: : 0px 15px;
+  }
+
+.img{
+  padding: 14px 25px;
+}
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.container {
+    text-align: center;
+    color: white;
+    height: 525px;
+}
+.contact{
+  padding-top: 0px;
+  margin-top: -425px;
+  margin-right: 10%;
+  margin-left: 5%;
+}
+.contactHead{
+  padding-top: 0px;
+  margin-top: -225px;
+  margin-right: 10%;
+  margin-left: 5%;
+  bottom: 0;
+}
+.rotateimg90 {
+  -webkit-transform:rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  z-index: 0;
+}
+.rotateimg270 {
+  -webkit-transform:rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.image { 
+   position: relative; 
+   width: 100%;
+}
+body{
+  background-color: "white";
+}
+.textImage {
+    background-color: lightgrey;
+    width: 600px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table th, td {
+    padding: 10px;
+}
+#grad1 {
+    height: 100%;
+    background: red; 
+    background: linear-gradient(#FFF380, white,#FFF380);
+}
+#grad2 {
+    height: 1000%;
+    background: red; 
+    background: linear-gradient(#FFFF99, #FFF380 ,#FFFF99);
+}
+div.show{
+  visibility: visible;
+}
+div.hide{
+  visibility: hidden;
+}
+#header{
+  height: auto;
+  width: 250px;
+}
+#header p{
+ border-left:1px solid #333; 
+ border-right:1px solid #333; 
+ padding: 10px 10px;
+ margin: 0;
+}
+#top{
+  width: 248px;
+  height: 30px;
+  border: 1px solid #333;
+}
+#bottom{
+  width: 248px;
+  height: 10px;
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-left-width: 1px;
+  border-top-style: none;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  border-left-style: solid;
+  border-top-color: #333;
+  border-right-color: #333;
+  border-bottom-color: #333;
+  border-left-color: #333;
+}
+.textlink:link, .textlink:visited {
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.textlink:hover, .textlink:active {
+    background-color: #00FF00;
+}
+#stext{
+  width: 75%;
+}
+.sidenav {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #FF8A00;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+.sidenav a {
+    font-family: Helvetica;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+.button {
+  padding: 15px 25px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #000;
+  background-color: #999;
+  border: none;
+  border-radius: 15px;
+}
+
+/*Header*/
+header{
+  background-color: #FF8A00;
+  color: white;
+  padding-top: 10px;
+  min-height: 50px;
+  border-bottom: #4909B2 3px solid;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+}
+
+header a{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 5px 0 5px;
+}
+
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px; 
+}
+
+header .highlight, header .current a{
+  color: #e8491d;
+  font-weight: bold;
+}
+.containerHeader{
+  font-family: Helvetica;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+header a:hover{
+  color: white;
+  font-weight: bold;
+}
+/*Footer*/
+footer{
+  background-color: #FF8A00;
+  padding-top: 10px;
+  min-height: 60px;
+  border-top: #4909B2 3px solid;
+  width: 100%;
+}
+footer p{
+  float: right;
+  margin-right: 20px;
+}
+/*Ability to be responsive*/
+.responsive{
+  width: 30%;
+  max-width: 400px;
+  height: 20%;
+  max-height: 300px;
+}
+/*sign in*/
+         .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            margin: 0 auto;
+            color: #017572;
+         }
+         
+         .form-signin .form-signin-heading,
+         .form-signin .checkbox {
+            margin-bottom: 10px;
+         }
+         
+         .form-signin .checkbox {
+            font-weight: normal;
+         }
+         
+         .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+         }
+         
+         .form-signin .form-control:focus {
+            z-index: 2;
+         }
+         
+         .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-color:#017572;
+         }
+         
+         .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-color:#017572;
+         }
+         
+         h2{
+            text-align: center;
+            float: center;
+         }
+  /*pop up menu code*/
+    a:link,
+  a:visited{
+   text-decoration: none;
+  }
+  /*main popup menu*/
+  .pmenu{
+   background-color: rgba(0,0,0, .8);
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  .pmenu-content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .8s;
+  }
+  #pmenu:target{
+   opacity: 1;
+   visibility: visible;
+  }
+  #pmenu:target .pmenu-content{
+   opacity: 1;
+   visibility: visible;
+  }
+  .pmenu-close{
+   color: #363636;
+   font-size: 2em;
+   position: absolute;
+   top: .5em;
+   right: 1em;
+  }
+  .pmenu-heading{
+   font-family: Helvetica;
+   color: #4909B2;
+   margin-bottom: 1em;
+  }
+  .pmenu-paragraph{
+   line-height: 1.5em;
+  }
+.pmenu-open{
+ font-family: Helvetica;
+ display: inline-block;
+ color: #4909B2;
+ margin: 2em;
+ background-color: #fff;
+}
+/*instagram popup menu*/
+  .pmenu2{
+   background-color: rgba(0,0,0, .8);
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  .pmenu2-content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .8s;
+  }
+  #pmenu2:target{
+   opacity: 1;
+   visibility: visible;
+  }
+  #pmenu2:target .pmenu2-content{
+   opacity: 1;
+   visibility: visible;
+  }
+.pmenu2-open{
+ font-family: Helvetica;
+ display: inline-block;
+ color: #4909B2;
+ margin: 2em;
+}
+/*Facebook popup menu*/
+  .pmenu3{
+   background-color: rgba(0,0,0, .8);
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  .pmenu3-content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .8s;
+  }
+  #pmenu3:target{
+   opacity: 1;
+   visibility: visible;
+  }
+  #pmenu3:target .pmenu3-content{
+   opacity: 1;
+   visibility: visible;
+  }
+.pmenu3-open{
+ font-family: Helvetica;
+ display: inline-block;
+ color: #4909B2;
+ margin: 2em;
+}
+/*Twitter popup menu*/
+  .pmenu4{
+   background-color: rgba(0,0,0, .8);
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  .pmenu4-content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .8s;
+  }
+  #pmenu4:target{
+   opacity: 1;
+   visibility: visible;
+  }
+  #pmenu4:target .pmenu4-content{
+   opacity: 1;
+   visibility: visible;
+  }
+.pmenu4-open{
+ font-family: Helvetica;
+ display: inline-block;
+ color: #4909B2;
+ margin: 2em;
+}
+/*Settings*/
+  .settings{
+   background-color: rgba(0,0,0, .8);
+   width:100%;
+   height: 100vh;
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 10;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .5s;
+  }
+  .settings-content{
+   width: 75%;
+   height: 65%;
+   background-color: #fff;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   padding: 2em;
+   border-radius: 1em;
+   opacity: 0;
+   visibility: hidden;
+   transition: all .8s;
+  }
+  #settings:target{
+   opacity: 1;
+   visibility: visible;
+  }
+  #settings:target .settings-content{
+   opacity: 1;
+   visibility: visible;
+  }
+.settings-open{
+ font-family: Helvetica;
+ display: inline-block;
+ color: #4909B2;
+ margin: 2em;
+}
+/*styling of Dashboard*/
+.row{
+  
+}
+.row div{
+  float: right;
+  margin-top: -1%;
+}
+.instagram-section{
+    border-radius: 25px;
+    background: linear-gradient(#7d30e2,#d81dac,#ef1a6e);
+    padding: 20px; 
+    width: 30%;
+    height: 67vh;    
+    margin-left: 5px
+}
+.facebook-section{
+    border-radius: 25px;
+    background: #3b579d;
+    padding: 20px; 
+    width: 30%;
+    height: 67vh;    
+    margin-left: 5px;
+}
+.twitter-section{
+    border-radius: 25px;
+    background: #28aae1;
+    padding: 20px; 
+    width: 30%;
+    height: 67vh;    
+    margin-left: 3px;
+}
+.pmenu-connect{
+   font-size: 24px;
+   font-family: Helvetica;
+   display: inline-block;
+   color: #4909B2;
+   margin: 2em;
+   margin-left: 13%;
+   margin-top:  25%;
+}

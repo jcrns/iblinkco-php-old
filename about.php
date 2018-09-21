@@ -64,9 +64,8 @@
 </center>
 
 <br>
-  <footer>
-    </p>
-    <p>iBlinkco, Copyright &copy; 2018</p>
-  </footer>
 </body>
+  <footer>
+    <p>iBlinkco, Copyright &copy; 2018</p>
+  </footer>x
 </html>

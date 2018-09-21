@@ -29,6 +29,8 @@
 </font>
 <center>
 <div>
+
+<!-------------Updated This Section--------------------->
 <div>
   <script>
     var i = 0; //Start Point
@@ -42,7 +44,8 @@
 
     //Change Image
     function changeImg(){
-      document.slide.src = images[i];
+      document.getElementById("slide").style.background = "url('"+images[i]+"') no-repeat ";
+      document.getElementById("slide").style.backgroundSize = "100% 100%";
 
       if(i < images.length - 1){
         i++;
@@ -55,14 +58,17 @@
 
     window.onload = changeImg;
   </script>
-  <div class="container">
-  <img name="slide" style="width: 100%; height: 75vh;">
-  <div class="contactHead">
-  <font face="impact" color="ff8a00" style="font-size: 5vw;"><b>BOOSTING SOCIAL MEDIA FOLLOWINGS<br> IN THE <font face="impact" color="ffffff" style="font-size: 5.5vw;">BLINK</font> OF AN EYE</b></font>
-    </div>
+  <div id="slide" class="container" style=" display: table; width: 100%; height:40vw;">
+     <font face="impact" color="ff8a00" style="font-size: 5vw; display: table-cell;
+ vertical-align: bottom; width: 100%;">
+        <b>BOOSTING SOCIAL MEDIA FOLLOWINGS<br> IN THE 
+        <font face="impact" color="ffffff" style="font-size: 5.5vw;">BLINK</font> OF AN EYE</b>
+        </font>
+  
   </div>
-</div>
 
+</div>
+<!-------------------------------------------->
 <hr>
 <font face = "courier" color = "5914CC"><h2 class="other">WHY TO MARKET YOUR BUSINESS ONLINE</font></h2>
 <font face = "Helvetica" color="black" size="5">
@@ -125,9 +131,9 @@ I own a company called Shoboss Entertainment Djs. It is a disc jockey company wh
 </font></p>
 </div>
 </center>
+</div>
+</body>
   <footer>
     <p>iBlinkco, Copyright &copy; 2018</p>
   </footer>
-</div>
-</body>
 </html>

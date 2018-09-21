@@ -22,16 +22,25 @@
 #visable2{
   display: block;
 }
+#visabletext{
+  display: block;
+}
 </style>
 <title><?php echo $_SESSION['username']; ?> Dashboard - iBlinkco</title>
 <script src="js/instafeed.min.js" type="text/javascript"></script>
-<script type="text/javascript">
+<script type="text/javascript" >
 
-
+var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
+var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
 var userFeed = new Instafeed({
+
+	// iBlinkco
+	// user id: 8286401205
+	// accessToken:8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f
+
     get: 'user',
-    userId: '8286401205', //php variable inputed by users
-    accessToken: '8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f', //important
+    userId: uid, //php variable inputed by users
+    accessToken: ak, //important
     template: '<p style="font-size:11px; margin-left:-15%; margin-top:2.5%;">Liked by {{model.likes.count}} people - commented by {{model.comments.count}} people - created on {{model.created_time}}</p>',
     	filter: function(image) {
 
@@ -122,7 +131,7 @@ var userFeed = new Instafeed({
     	<br>
     	<input style="font-size: 24px;" type="text" name="accesskey-instagram" placeholder="Instagram Access Key">
     	<br>
-		<button style="font-size: 24px;">submit</button>
+		<button style="font-size: 24px;" onclick="displayNone2()">submit</button>
     </form>
  </div>
 </div>
@@ -163,9 +172,9 @@ var userFeed = new Instafeed({
 
 	<div class="instagram-section">
 		<p style="color: white;">Instagram</p>
-		<!-- <a href="#pmenu2" class="pmenu-connect">CONNECT AN ACCOUNT</a> -->
+		<a href="#pmenu2" class="pmenu-connect" id="visabletext">CONNECT AN ACCOUNT</a>
 		<!-- Connected Account -->
-		<button id="visable2" style="font-size: 14px;" onclick="displayShow()">Account Log</button>
+		<button id="visable2" style="font-size: 14px;">Account Log</button>
 		<br>
 		<div id="visable">
 			<div id="wrapper">
@@ -185,6 +194,9 @@ var userFeed = new Instafeed({
 	    document.getElementById("visable").style.display = "none";
 	    document.getElementById("visable2").style.display = "block";
 	}
+	function displayNone2() {
+	    document.getElementById("visabletext").style.display = "none";
+	}
 	</script>
 </div>
 <br>
@@ -198,6 +210,7 @@ var userFeed = new Instafeed({
 <br>
 <br>
 <br>
+
 <br>
 <br>
 <br>
@@ -213,7 +226,7 @@ var userFeed = new Instafeed({
 <br>
 <br>
 <br>
-  <footer>
+  <footer>]
     <p>iBlinkco, Copyright &copy; 2018</p>
   </footer>
 <body = bgcolor="white"></body>

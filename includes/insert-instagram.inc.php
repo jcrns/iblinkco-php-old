@@ -2,26 +2,39 @@
 session_start();
 include_once 'config.inc.php';
 
+
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-	$userid_instagram = $_POST['userid-instagram'];
-
-	$sql = "UPDATE lg.users SET userid_instagram='" . $userid_instagram . "' WHERE username = '". $_SESSION['username']."';";
-
+	$userid_instagram = $_POST["userid-instagram"];
 	$accesskey_instagram = $_POST['accesskey-instagram'];
-
-	$sql = $sql. " UPDATE lg.users SET accesskey_instagram='" . $accesskey_instagram. "' WHERE username = '".$_SESSION['username']."'";
-	$results = mysqli_query($link, $sql);
-	echo $sql;
-	//Stored Variable in session
-	$_SESSION["accesskey-instagram"] = $accesskey_instagram; 
+	$_SESSION["accesskey-instagram"] = $accesskey_instagram;
 	$_SESSION["userid-instagram"] = $userid_instagram;  
-	$_SESSION["sql"] = $sql;
-	if (mysqli_query($link, $sql)) {
+	
+	/*** 
+		shorten the sql query to just 1 using the AND command
+	***/
+		$sql = "UPDATE lg.users SET userid_instagram='" . $userid_instagram . "', accesskey_instagram= '" . $accesskey_instagram . "' WHERE username = '". $_SESSION['username'] ."';";
+		// $sql = "select * from lg.users";
+
+		$_SESSION["sql"] = $sql;
+	
+	 $link = dbConnect();
+	
+	/*****
+		 Was not pulling the $link variable in correctly
+	 ****/
+		 if (mysqli_query($link, $sql)) {
+
 	    header("Location:../dashboard.php?updatesuccessful");
-	    echo "Record updated successfully";
+	    echo $sql;
+	       //Updated This to write error to console
+	    echo ('Recorded Successfully');
 	} else {
 		header("Location:../dashboard.php?" . $sql);
-	    echo "Error submiting: " . mysqli_error($link);
-	    echo $sql;
+	    //Updated This to write error to console
+	      echo "0 results";
+
 	}
+	mysqli_close($link);
 }
+
+?>

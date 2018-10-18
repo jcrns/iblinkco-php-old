@@ -1,18 +1,41 @@
-$(document).ready(function() {
+    //instagram functions
+    function displayShow() {
+        document.getElementById("visable").style.display = "block";
+        document.getElementById("visable2").style.display = "none";
+    }
+    function displayNone() {
+        document.getElementById("visable").style.display = "none";
+        document.getElementById("visable2").style.display = "block";
+    }
+    function displayNone2() {
+        location.href = "#";
+        document.getElementById("visabletext").style.display = "none";
+        document.getElementById("visable2").style.display = "block";
+    }
 
+    //facebook functions
+    function FBdisplayShow() {
+        document.getElementById("visableFB").style.display = "block";
+        document.getElementById("visable2FB").style.display = "none";
+    }
+    function FBdisplayNone() {
+        document.getElementById("visableFB").style.display = "none";
+        document.getElementById("visable2FB").style.display = "block";
+    }
+    function FBdisplayNone2() {
+        if (window.onload) {
+            location.href = "#";
+            document.getElementById("visabletextFB").style.display = "none";
+            document.getElementById("visable2FB").style.display = "block";
+        }
+    }
 
-    var userFeed = new Instafeed({
-        get: 'user',
-        userId: '8286401205', //php variable inputed by users
-        limit: 12, 
-        resolution: 'standard_resolution',
-        accessToken: '8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f', //not important
-        sortBy: 'most-recent', 
-        template: '<label><b>Tags</b>: {{model.tags}}</label><br/><label>Liked by <b>{{model.likes.count}}</b> people</label>'
-            });
-
-    userFeed.run();
-
-
-
-});
+    //Dashboard Pages
+    function Adisplay1(){
+        document.getElementById("A-visable").style.display = "none";
+        document.getElementById("A-visable2").style.display = "block";
+    }
+    function Adisplay2(){
+        document.getElementById("A-visable").style.display = "block";
+        document.getElementById("A-visable2").style.display = "none";
+    }

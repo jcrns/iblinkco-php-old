@@ -9,56 +9,56 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 }
 // twitter api
 ?>
-	<!DOCTYPE html>
-	<html>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<head>
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/dashboard.css">
-		<script src="js/custom.js" type="text/javascript"></script>
-		<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
-		<style type="text/css">
-		/*visability of divs*/
-		/*instagram visability*/
-		#visable{
-			display: none;
-		}
-		#visable2{
-			display: none;
-		}
-		#visabletext{
-			display: block;
-		}
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
+	<script src="js/custom.js" type="text/javascript"></script>
+	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
+	<style type="text/css">
+	/*visability of divs*/
+	/*instagram visability*/
+	#visable{
+		display: none;
+	}
+	#visable2{
+		display: none;
+	}
+	#visabletext{
+		display: block;
+	}
 
-		/*facebook visability*/
-		#visableFB{
-			display: none;
-		}
-		#visable2FB{
-			display: none;
-		}
-		#visabletextFB{
-			display: block;
-		}
-		/*different pages*/
-		#content-dashboard{
-			display: block;
-		}
-		#A-visable{
-			display: block;
-		}
-		#A-visable2{
-			display: none;
-		}
-	</style>
+	/*facebook visability*/
+	#visableFB{
+		display: none;
+	}
+	#visable2FB{
+		display: none;
+	}
+	#visabletextFB{
+		display: block;
+	}
+	/*different pages*/
+	#content-dashboard{
+		display: block;
+	}
+	#A-visable{
+		display: block;
+	}
+	#A-visable2{
+		display: none;
+	}
+</style>
 
-	<title><?php echo $_SESSION['username']; ?> Dashboard - iBlinkco</title>
-	<script src="js/instafeed.min.js" type="text/javascript"></script>
-	<script type="text/javascript" >
+<title><?php echo $_SESSION['username']; ?> Dashboard - iBlinkco</title>
+<script src="js/instafeed.min.js" type="text/javascript"></script>
+<script type="text/javascript" >
 
-		var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
-		var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
-		var userFeed = new Instafeed({
+	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
+	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
+	var userFeed = new Instafeed({
 
 	// iBlinkco
 	// user id: 8286401205
@@ -67,38 +67,38 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	get: 'user',
 	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
 	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
-    template: '<p style="font-size:11px; margin-left:-15%; margin-top:2.5%;">Liked by {{model.likes.count}} people - commented by {{model.comments.count}} people - created on {{model.created_time}}</p>',
-    filter: function(image) {
+	template: '<p style="font-size:11px; margin-left:-15%; margin-top:2.5%;">Liked by {{model.likes.count}} people - commented by {{model.comments.count}} people - created on {{model.created_time}}</p>',
+	filter: function(image) {
 
-    	var date = new Date(image.created_time*1000);
+		var date = new Date(image.created_time*1000);
 
-    	m = date.getMonth();
-    	d = date.getDate();
-    	y = date.getFullYear();
+		m = date.getMonth();
+		d = date.getDate();
+		y = date.getFullYear();
 
-    	var month_names = new Array ( );
-    	month_names[month_names.length] = "Jan";
-    	month_names[month_names.length] = "Feb";
-    	month_names[month_names.length] = "Mar";
-    	month_names[month_names.length] = "Apr";
-    	month_names[month_names.length] = "May";
-    	month_names[month_names.length] = "Jun";
-    	month_names[month_names.length] = "Jul";
-    	month_names[month_names.length] = "Aug";
-    	month_names[month_names.length] = "Sep";
-    	month_names[month_names.length] = "Oct";
-    	month_names[month_names.length] = "Nov";
-    	month_names[month_names.length] = "Dec";
+		var month_names = new Array ( );
+		month_names[month_names.length] = "Jan";
+		month_names[month_names.length] = "Feb";
+		month_names[month_names.length] = "Mar";
+		month_names[month_names.length] = "Apr";
+		month_names[month_names.length] = "May";
+		month_names[month_names.length] = "Jun";
+		month_names[month_names.length] = "Jul";
+		month_names[month_names.length] = "Aug";
+		month_names[month_names.length] = "Sep";
+		month_names[month_names.length] = "Oct";
+		month_names[month_names.length] = "Nov";
+		month_names[month_names.length] = "Dec";
 
-    	var thetime = month_names[m] + ' ' + d + ' ' + y;
+		var thetime = month_names[m] + ' ' + d + ' ' + y;
 
-    	image.created_time = thetime;
+		image.created_time = thetime;
 
-    	return true;
-    }
+		return true;
+	}
 });
-		userFeed.run();
-	</script>
+	userFeed.run();
+</script>
 </head>
 <?php
 include_once 'header.php';
@@ -169,15 +169,15 @@ include_once 'header.php';
 		<div class="pmenu2-content">
 			<a href="#" class="pmenu-close">&times;</a>
 			<h2 class="pmenu-heading">CONNECT INSTAGRAM</h2>
-		    <form action="includes/insert-instagram.inc.php" method="POST">
-		    	<input style="font-size: 24px;" type="text" name="userid-instagram" placeholder="Instagram Userid">
-		    	<br>
-		    	<input style="font-size: 24px;" type="text" name="accesskey-instagram" placeholder="Instagram Access Key">
-		    	<br>
-		    	<!-- button? -->
+			<form action="includes/insert-instagram.inc.php" method="POST" onsubmit="return displayNone2()">
+				<input style="font-size: 24px;" type="text" name="userid-instagram" placeholder="Instagram Userid">
+				<br>
+				<input style="font-size: 24px;" type="text" name="accesskey-instagram" placeholder="Instagram Access Key">
+				<br>
+				<!-- button? -->
 				<input type="button" style="font-size: 24px;" value="submit" onclick= "displayNone2();">
 				<!-- <button style="font-size: 24px;" onclick= "displayNone2();">Submit</button> -->
-		    </form>
+			</form>
 		</div>
 	</div>
 	<br>

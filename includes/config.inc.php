@@ -16,12 +16,19 @@ define('DB_NAME', 'lg');
 function dbConnect(){
 	$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
 
+//Creating Connection between PHP and Console
+function debug_to_console( $data ) {
+    $output = $data;
+    if ( is_array( $output ) )
+        $output = implode( ',', $output);
 
+    echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+}
 // Check connection
 if (!$conn) {
     die ("ERROR: Could not connect. " . mysqli_connect_error());
 }
-echo "Connected successfully";
+debug_to_console( "Connected successfully" );
   	return $conn;
 
 }

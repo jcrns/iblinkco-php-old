@@ -8,9 +8,12 @@
         document.getElementById("visable2").style.display = "block";
     }
     function displayNone2() {
-        location.href = "#";
-        document.getElementById("visabletext").style.display = "none";
-        document.getElementById("visable2").style.display = "block";
+        if (window.onload) {
+            location.href = "#";
+            document.getElementById("visabletext").style.display = "none";
+            document.getElementById("visable2").style.display = "block";
+            return fasle;
+        }
     }
 
     //facebook functions
@@ -23,12 +26,10 @@
         document.getElementById("visable2FB").style.display = "block";
     }
     function FBdisplayNone2() {
-        if (window.onload) {
             location.href = "#";
             document.getElementById("visabletextFB").style.display = "none";
             document.getElementById("visable2FB").style.display = "block";
         }
-    }
 
     //Dashboard Pages
     function Adisplay1(){

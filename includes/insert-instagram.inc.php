@@ -25,9 +25,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		 if (mysqli_query($link, $sql)) {
 
 	    header("Location:../dashboard.php?updatesuccessful");
-	    echo $sql;
+	    echo '<script>
+	    	
+            document.getElementById("visabletext").style.display = "none";
+            document.getElementById("visable2").style.display = "block";
+            </script>';
+	    // echo $sql;
 	       //Updated This to write error to console
-	    echo ('Recorded Successfully');
+	    // echo ('Recorded Successfully');
 	} else {
 		header("Location:../dashboard.php?" . $sql);
 	    //Updated This to write error to console

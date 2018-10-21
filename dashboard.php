@@ -175,7 +175,7 @@ include_once 'header.php';
 				<input style="font-size: 24px;" type="text" name="accesskey-instagram" placeholder="Instagram Access Key">
 				<br>
 				<!-- button? -->
-				<input type="button" style="font-size: 24px;" value="submit" onclick= "displayNone2();">
+				<input type="submit" style="font-size: 24px;" value="submit" onclick= "displayNone2();">
 				<!-- <button style="font-size: 24px;" onclick= "displayNone2();">Submit</button> -->
 			</form>
 		</div>

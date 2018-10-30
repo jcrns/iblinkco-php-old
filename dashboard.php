@@ -13,7 +13,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
 	<script src="js/custom.js" type="text/javascript"></script>
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
@@ -55,9 +54,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <title><?php echo $_SESSION['username']; ?> Dashboard - iBlinkco</title>
 <script src="js/instafeed.min.js" type="text/javascript"></script>
 <script type="text/javascript" >
-
+	alert("ak");
 	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
 	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
+	
 	var userFeed = new Instafeed({
 
 	// iBlinkco
@@ -169,13 +169,13 @@ include_once 'header.php';
 		<div class="pmenu2-content">
 			<a href="#" class="pmenu-close">&times;</a>
 			<h2 class="pmenu-heading">CONNECT INSTAGRAM</h2>
-			<form action="includes/insert-instagram.inc.php" method="POST" onsubmit="return displayNone2()">
+			<form action="includes/insert-instagram.inc.php" method="POST">
 				<input style="font-size: 24px;" type="text" name="userid-instagram" placeholder="Instagram Userid">
 				<br>
 				<input style="font-size: 24px;" type="text" name="accesskey-instagram" placeholder="Instagram Access Key">
 				<br>
 				<!-- button? -->
-				<input type="submit" style="font-size: 24px;" value="submit" onclick= "displayNone2();">
+				<input type="button" style="font-size: 24px;" value="submit" onclick= "displayNone2();">
 				<!-- <button style="font-size: 24px;" onclick= "displayNone2();">Submit</button> -->
 			</form>
 		</div>

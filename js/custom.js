@@ -8,12 +8,9 @@
         document.getElementById("visable2").style.display = "block";
     }
     function displayNone2() {
-        if (window.onload) {
             location.href = "#";
             document.getElementById("visabletext").style.display = "none";
             document.getElementById("visable2").style.display = "block";
-            return fasle;
-        }
     }
 
     //facebook functions

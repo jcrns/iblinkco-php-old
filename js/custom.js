@@ -1,16 +1,33 @@
-    //instagram functions
+
     function displayShow() {
         document.getElementById("visable").style.display = "block";
         document.getElementById("visable2").style.display = "none";
     }
     function displayNone() {
+       
         document.getElementById("visable").style.display = "none";
         document.getElementById("visable2").style.display = "block";
     }
-    function displayNone2() {
-            location.href = "#";
+    function displayNone2(e) {
+        
+        // alert(e);
+        if(e){
             document.getElementById("visabletext").style.display = "none";
             document.getElementById("visable2").style.display = "block";
+        }
+        else{
+
+            document.getElementById("visabletext").style.display = "block";
+            document.getElementById("visable2").style.display = "none";
+ location.reload();
+        }
+
+    }
+    function displayNone3() {
+            document.getElementById("visabletext").style.display = "block";
+            document.getElementById("visable2").style.display = "no";
+
+
     }
 
     //facebook functions

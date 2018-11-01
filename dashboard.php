@@ -169,17 +169,23 @@ include_once 'header.php';
 		<div class="pmenu2-content">
 			<a href="#" class="pmenu-close">&times;</a>
 			<h2 class="pmenu-heading">CONNECT INSTAGRAM</h2>
-			<form action="includes/insert-instagram.inc.php" method="POST">
+			<!-- Added instagram ID For the Form" -->
+			<form id="insta-form" action="includes/insert-instagram.inc.php" method="POST">
 				<input style="font-size: 24px;" type="text" name="userid-instagram" placeholder="Instagram Userid">
 				<br>
 				<input style="font-size: 24px;" type="text" name="accesskey-instagram" placeholder="Instagram Access Key">
 				<br>
 				<!-- button? -->
-				<input type="reset" style="font-size: 24px;" value="submit" onclick= "displayNone2();">
+
+				<input type="submit" style="font-size: 24px;" value="submit" >
+				
 				<!-- <button style="font-size: 24px;" onclick= "displayNone2();">Submit</button> -->
 			</form>
 		</div>
 	</div>
+	<script type="text/javascript">
+	
+	</script>
 	<br>
 
 	<!-- p menu 3 -->
@@ -259,7 +265,20 @@ include_once 'header.php';
 			<p style="color: white;">Instagram</p>
 			<a href="#pmenu2" class="pmenu-connect" id="visabletext">CONNECT AN ACCOUNT</a>
 			<!-- Connected Account -->
-			<button id="visable2" style="font-size: 14px;" onclick="displayShow()">Account Log</button>
+		
+
+			<button id='visable2' style='font-size: 14px;' onclick='displayShow()'>Account Log</button>			
+	<?php
+	
+				if(isset($_SESSION['insta-btn']) && !empty($_SESSION['insta-btn'])){
+
+					echo "<script>displayNone2(".$_SESSION['insta-btn']."); </script>";
+				}
+				
+
+				
+			?>
+			
 			<br>
 			<div id="visable">
 				<div id="wrapper">
@@ -267,11 +286,14 @@ include_once 'header.php';
 						<div id="instafeed"></div>
 					</div>
 				</div>
-				<button style="font-size: 14px;" onclick="displayNone()">Close Account Log</button>
+
+				<button style="font-size: 14px;" onclick="displayNone();">Close Account Log</button>
+				<button style="font-size: 14px;" onclick="displayNone2(<?php  $_SESSION['insta-btn'] =0; echo $_SESSION['insta-btn'];?>);">Disconnect Account </button>
 			</div>
 		</div>
 	</div>
 </div>
+
 <br>
 <br>
 <br>

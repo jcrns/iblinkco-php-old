@@ -3,7 +3,7 @@
 server with default setting (user 'root' with no password) */
 define('DB_SERVER', 'localhost');
 define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'Cummings10');
+define('DB_PASSWORD', 'root');
 define('DB_NAME', 'lg');
  
 

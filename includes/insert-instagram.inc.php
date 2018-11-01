@@ -23,7 +23,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		 Was not pulling the $link variable in correctly
 	 ****/
 		 if (mysqli_query($link, $sql)) {
-
+		 	$_SESSION["insta-btn"] = 1; 
 		 	header("Location:../dashboard.php?updatesuccessful");
 		 	echo $sql;
 	       // Updated This to write error to console

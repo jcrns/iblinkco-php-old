@@ -9,8 +9,9 @@
         document.getElementById("visable2").style.display = "block";
     }
     function displayNone2(e) {
-        
-        // alert(e);
+        /******************* I have Add Some PHP HERE David ********************/
+
+        // Submitted to DB Then Display Else Hide and reload
         if(e){
             document.getElementById("visabletext").style.display = "none";
             document.getElementById("visable2").style.display = "block";

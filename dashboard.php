@@ -267,9 +267,15 @@ include_once 'header.php';
 			<!-- Connected Account -->
 		
 
-			<button id='visable2' style='font-size: 14px;' onclick='displayShow()'>Account Log</button>			
+			<button id='visable2' style='font-size: 14px;' onclick='displayShow()'>Account Log</button>	
+
+
+
+<!----------------------I have Add Some PHP HERE David ------------------------------->
+
+			
 	<?php
-	
+	// Added this code to check if btn has been submitted and if so display the log button
 				if(isset($_SESSION['insta-btn']) && !empty($_SESSION['insta-btn'])){
 
 					echo "<script>displayNone2(".$_SESSION['insta-btn']."); </script>";

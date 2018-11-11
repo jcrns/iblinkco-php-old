@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
   <meta name="description" content="Affordable and Reliable Social Media Marketing. increase your business presence online NOW!"/>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
   <link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
   <title>Affordable Social Media Management | iBlinkco</title>
   <script type="application/ld+json">
@@ -19,14 +19,9 @@
 <?php
 include_once 'header.php';
 ?>
-
-<div class="main">
-  <br>
-  <br>
-  <br>
-</div>
-</div>
-</font>
+<br>
+<br>
+<br>
 <center>
   <div>
 
@@ -59,56 +54,17 @@ include_once 'header.php';
     window.onload = changeImg;
   </script>
   <div id="slide" class="container" style=" display: table; width: 100%; height:40vw;">
-   <font face="impact" color="ff8a00" style="font-size: 5vw; display: table-cell;
-   vertical-align: bottom; width: 100%;">
-   <b>BOOSTING SOCIAL MEDIA FOLLOWINGS<br> IN THE 
-    <font face="impact" color="ffffff" style="font-size: 5.5vw;">BLINK</font> OF AN EYE</b>
-  </font>
+   <h1 id="slidetext">
+   <b>ACCESSING SOCIAL MEDIA FOLLOWINGS<br> IN THE 
+    <span id="slidetext-white">BLINK</span> OF AN EYE</b>
+  </h1>
   
 </div>
 
 </div>
 <!-------------------------------------------->
-<hr>
-<font face = "courier" color = "5914CC"><h2 class="other">WHY TO MARKET YOUR BUSINESS ONLINE</font></h2>
-<font face = "Helvetica" color="black" size="5">
-  <b>Online advertising is essential for promoting business. Millions are online everyday and potential customers are everywhere.
-  </b>
-</font>
-<hr>
-<font face = "courier" color = "5914CC"><h2 class="other">WE WILL MAXIMIZE YOUR BUSINESS ON THESE SITES</font></h2>
-
-<div>
-  <img src = "http://icons.iconarchive.com/icons/xenatt/the-circle/512/App-Google-icon.png" class="img" width = "75" height = "75">
-
-  <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2000px-Facebook_icon.svg.png" class="img" width = "75" height = "75">
-
-  <img src = "https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" class="img" width = "75" height = "75">
-
-  <br>
-
-  <img src = "http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" class="img" width = "75" height = "75">
-
-  <img src = "http://www.iconarchive.com/download/i75943/martz90/circle/yahoo.ico" width = "75" class="img" height = "75">
-
-  <img src = "https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/71/1c/76/711c76eb-916c-6bcb-ce1b-630a38974d1d/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg" class="img" width = "75" height = "75">
-
-  <img src = "https://yt3.ggpht.com/a-/ACSszfFfhnvZ7yv0WFHytVozUgflXbwEmdpCRYtkTQ=s900-mo-c-c0xffffffff-rj-k-no" class="img" width = "75" height = "75">
-
-
-  <hr>
-  <font face = "courier" color = "5914CC"><h2 class="other">WHY USE iBLINKCO</font></h2>
-
-  <font face = "Helvetica" color="black" size="5">
-    <b>iBlinkco will maximize your customers and advertise your business across many platforms for a small monthly fee. iBlinkco is different because of our extraordinary service for a low price and us doing business different from our competitors.</b>
-  </font>
-
-  <font face = "courier" color = "5914CC"><h2 class="other">WHAT WE BELIEVE</font></h2>
-
-  <font face = "Helvetica" color="black" size="5">
-    <b>We at iBlinkco believe that small businesses should all have an equal opportunity to grow and we believe that small businesses that don't have an online presence miss out on business.</b>
-  </font>
-  <br>
+<!-- Reviews -->
+<div id="reviews">
   <font face = "courier" color = "5914CC"><h2 class="other">REVIEWS</font></h2>
   <br>
   <div id="stext">
@@ -130,8 +86,47 @@ include_once 'header.php';
       I own a company called Shoboss Entertainment Djs. It is a disc jockey company which is located in the Sacramento Area. Our company didn't have any social media accounts, so we turned to iBlinkco and we gained results instantly. Before iBlinkco, we relied on personal connections and word of mouth only. But now iBlinkco helped us get our name out into the world. Our instagram gained 100 followers within a week and includes a video with hundreds of views.<br> - Michael Briggs
     </font></p>
   </div>
-</center>
 </div>
+<hr>
+<font face = "courier" color = "5914CC"><h2 class="other">WHY TO MARKET YOUR BUSINESS ONLINE</font></h2>
+<font face = "Helvetica" color="black" size="5">
+  <b>Online advertising is essential for promoting business. Millions are online everyday and potential customers are everywhere.
+  </b>
+</font>
+<hr>
+<font face = "courier" color = "5914CC"><h2 class="other">WE WILL MAXIMIZE YOUR BUSINESS ON THESE SITES</font></h2>
+
+<img src = "http://icons.iconarchive.com/icons/xenatt/the-circle/512/App-Google-icon.png" class="img" width = "75" height = "75">
+
+<img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2000px-Facebook_icon.svg.png" class="img" width = "75" height = "75">
+
+<img src = "https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" class="img" width = "75" height = "75">
+
+<br>
+
+<img src = "http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" class="img" width = "75" height = "75">
+
+<img src = "http://www.iconarchive.com/download/i75943/martz90/circle/yahoo.ico" width = "75" class="img" height = "75">
+
+<img src = "https://is3-ssl.mzstatic.com/image/thumb/Purple125/v4/71/1c/76/711c76eb-916c-6bcb-ce1b-630a38974d1d/AppIcon-1x_U007emarketing-0-0-GLES2_U002c0-512MB-sRGB-0-0-0-85-220-0-0-0-6.png/246x0w.jpg" class="img" width = "75" height = "75">
+
+<img src = "https://yt3.ggpht.com/a-/ACSszfFfhnvZ7yv0WFHytVozUgflXbwEmdpCRYtkTQ=s900-mo-c-c0xffffffff-rj-k-no" class="img" width = "75" height = "75">
+
+
+<hr>
+<font face = "courier" color = "5914CC"><h2 class="other">WHY USE iBLINKCO</font></h2>
+
+<font face = "Helvetica" color="black" size="5">
+  <b>iBlinkco will maximize your customers and advertise your business across many platforms for a small monthly fee. iBlinkco is different because of our extraordinary service for a low price and us doing business different from our competitors.</b>
+</font>
+
+<font face = "courier" color = "5914CC"><h2 class="other">WHAT WE BELIEVE</font></h2>
+
+<font face = "Helvetica" color="black" size="5">
+  <b>We at iBlinkco believe that small businesses should all have an equal opportunity to grow and we believe that small businesses that don't have an online presence miss out on business.</b>
+</font>
+<br>
+</center>
 </body>
 <footer>
   <p>iBlinkco, Copyright &copy; 2018</p>

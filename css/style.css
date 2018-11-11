@@ -3,15 +3,6 @@
   margin: 0;
   padding: 0;
 }
-.other {
-  background-color: #FF9C4C;
-  margin: 25px;
-  padding: : 0px 15px;
-}
-
-.img{
-  padding: 14px 25px;
-}
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -20,12 +11,6 @@ table, th, td {
   text-align: center;
   color: white;
   height: 525px;
-}
-.contact{
-  padding-top: 0px;
-  margin-top: -425px;
-  margin-right: 10%;
-  margin-left: 5%;
 }
 .contactHead{
   padding-top: 0px;
@@ -127,9 +112,6 @@ div.hide{
 
 .textlink:hover, .textlink:active {
   background-color: #00FF00;
-}
-#stext{
-  width: 75%;
 }
 .sidenav {
   height: 100%;
@@ -300,3 +282,4 @@ h2{
   width: 120px;
   height: 50px;
 }
+

@@ -14,7 +14,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
 	<link rel="stylesheet" type="text/css" href="css/dashboard.css">
-	<script src="js/custom.js" type="text/javascript"></script>
+	<script src="js/dashboard.js" type="text/javascript"></script>
 	<link rel="shortcut icon" href="img/icon.ico" type="image/x-icon">
 	<style type="text/css">
 	/*visability of divs*/
@@ -297,7 +297,7 @@ include_once 'header.php';
 <br>
 <br>
 <br>
-<footer>
+<footer id="footer">
 	<p>iBlinkco, Copyright &copy; 2018</p>
 </footer>
 </html>

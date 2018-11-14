@@ -1,4 +1,3 @@
-
 function displayShow() {
     document.getElementById("visable").style.display = "block";
     document.getElementById("visable2").style.display = "none";

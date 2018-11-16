@@ -1,3 +1,4 @@
+<!-- connect Branch -->
 <?php
 // Initialize the session
 session_start();
@@ -20,13 +21,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	/*visability of divs*/
 	/*instagram visability*/
 	#visable{
-		display: none;
+		display: block;
 	}
 	#visable2{
 		display: none;
 	}
 	#visabletext{
-		display: block;
+		display: none;
 	}
 
 	/*facebook visability*/
@@ -50,14 +51,13 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		display: none;
 	}
 </style>
-
+</head>
 <title><?php echo $_SESSION['username']; ?> Dashboard - iBlinkco</title>
 <script src="js/instafeed.min.js" type="text/javascript"></script>
 <script type="text/javascript" >
-	alert("ak");
-	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
-	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
-	
+	var ak = "8286401205";
+	var uid = "8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f";
+
 	var userFeed = new Instafeed({
 
 	// iBlinkco
@@ -65,8 +65,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	// accessToken:8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f
 
 	get: 'user',
-	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
-	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
+	userId: '8286401205',
+	accessToken: '8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f',
 	template: '<p style="font-size:11px; margin-left:-15%; margin-top:2.5%;">Liked by {{model.likes.count}} people - commented by {{model.comments.count}} people - created on {{model.created_time}}</p>',
 	filter: function(image) {
 
@@ -99,7 +99,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 });
 	userFeed.run();
 </script>
-</head>
 <?php
 include_once 'header.php';
 ?>
@@ -150,7 +149,7 @@ include_once 'header.php';
 		<div class="pmenu-content">
 			<a href="#" class="pmenu-close">&times;</a>
 			<h2 class="pmenu-heading">CHOOSE A SOCIAL MEDIA ACCOUNT TO CONNECT</h2>
-			<!-- Instagram -->   		
+			<!-- Instagram -->
 			<a href="#pmenu2" class="pmenu2-open">
 				<img src = "https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" class="img" width = "75" height = "75">
 			</a>
@@ -211,7 +210,7 @@ include_once 'header.php';
 						version    : 'v3.1'
 					});
 
-					FB.AppEvents.logPageView();   
+					FB.AppEvents.logPageView();
 
 				};
 
@@ -297,7 +296,7 @@ include_once 'header.php';
 <br>
 <br>
 <br>
-<footer>
+<footer id="footer">
 	<p>iBlinkco, Copyright &copy; 2018</p>
 </footer>
 </html>

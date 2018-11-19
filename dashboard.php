@@ -65,8 +65,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	// accessToken:8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f
 
 	get: 'user',
-	userId: '8286401205',
-	accessToken: '8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f',
+	userId: ak,
+	accessToken: uid,
 	template: '<p style="font-size:11px; margin-left:-15%; margin-top:2.5%;">Liked by {{model.likes.count}} people - commented by {{model.comments.count}} people - created on {{model.created_time}}</p>',
 	filter: function(image) {
 

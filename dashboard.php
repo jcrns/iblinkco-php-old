@@ -53,7 +53,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	}
 </style>
 
-<title><?php echo $_SESSION["username"]; ?> Dashboard - iBlinkco</title>
+<title><?php echo $_SESSION["accesskey-instagram"]; ?> Dashboard - iBlinkco</title>
 <script src="js/instafeed.min.js" type="text/javascript"></script>
 <script type="text/javascript" >
 	 var ak = <?php echo json_encode($_SESSION["accesskey-instagram"]); ?>;
@@ -83,7 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		d = date.getDate();
 		y = date.getFullYear();
 
-		var month_names = new Array ();
+		var month_names = new Array ( );
 		month_names[month_names.length] = "Jan";
 		month_names[month_names.length] = "Feb";
 		month_names[month_names.length] = "Mar";
@@ -115,7 +115,7 @@ include_once 'header.php';
 <!-- background color divs -->
 <div style="padding-top: 100px; background-color: #aeaeae; font-family: Helvetica; border-radius: 10px;">
 	<div style="margin-top: -1.5%;">
-		<p style="font-family: Helvetica; float: left;">Welcome, <b>	<?php echo $_SESSION["username"]; ?></b>.</p>
+		<p style="font-family: Helvetica; float: left;">Welcome, <b>	<?php echo $_SESSION["userid-instagram"]; ?></b>.</p>
 
 		<!-- oppening to pop up menu -->
 		<p style="float: right; margin-right: 10%; color:black;" id="A-visable" onclick="Adisplay1()"><a href="#analytics"><b>Analytics</b></a></p>

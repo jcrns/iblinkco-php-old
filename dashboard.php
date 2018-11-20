@@ -1,6 +1,8 @@
 <?php
 // Initialize the session
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 include_once "includes/config.inc.php";
 // Check if the user is logged in, if not then redirect him to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
@@ -51,13 +53,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	}
 </style>
 
-<title><?php echo $_SESSION['username']; ?> Dashboard - iBlinkco</title>
+<title><?php echo $_SESSION["username"]; ?> Dashboard - iBlinkco</title>
 <script src="js/instafeed.min.js" type="text/javascript"></script>
 <script type="text/javascript" >
-	alert("ak");
-	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
-	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
-	
+	 var ak = <?php echo json_encode($_SESSION["accesskey-instagram"]); ?>;
+	 var uid = <?php echo json_encode($_SESSION["userid-instagram"]); ?>;
+
+
+	// alert(ak , uid);
+	// ak.toString();
+	// uid.toString();
+
+
 	var userFeed = new Instafeed({
 
 	// iBlinkco
@@ -65,8 +72,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	// accessToken:8286401205.1677ed0.ddb59e662eb349db8a471ade8feb661f
 
 	get: 'user',
-	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
-	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
+	accessToken: ak,
+	userId: uid,
 	template: '<p style="font-size:11px; margin-left:-15%; margin-top:2.5%;">Liked by {{model.likes.count}} people - commented by {{model.comments.count}} people - created on {{model.created_time}}</p>',
 	filter: function(image) {
 
@@ -76,7 +83,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		d = date.getDate();
 		y = date.getFullYear();
 
-		var month_names = new Array ( );
+		var month_names = new Array ();
 		month_names[month_names.length] = "Jan";
 		month_names[month_names.length] = "Feb";
 		month_names[month_names.length] = "Mar";
@@ -97,16 +104,18 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		return true;
 	}
 });
+
 	userFeed.run();
 </script>
 </head>
+
 <?php
 include_once 'header.php';
 ?>
 <!-- background color divs -->
 <div style="padding-top: 100px; background-color: #aeaeae; font-family: Helvetica; border-radius: 10px;">
 	<div style="margin-top: -1.5%;">
-		<p style="font-family: Helvetica; float: left;">Welcome, <b><?php echo $_SESSION["username"]; ?></b>.</p>
+		<p style="font-family: Helvetica; float: left;">Welcome, <b>	<?php echo $_SESSION["username"]; ?></b>.</p>
 
 		<!-- oppening to pop up menu -->
 		<p style="float: right; margin-right: 10%; color:black;" id="A-visable" onclick="Adisplay1()"><a href="#analytics"><b>Analytics</b></a></p>
@@ -150,7 +159,7 @@ include_once 'header.php';
 		<div class="pmenu-content">
 			<a href="#" class="pmenu-close">&times;</a>
 			<h2 class="pmenu-heading">CHOOSE A SOCIAL MEDIA ACCOUNT TO CONNECT</h2>
-			<!-- Instagram -->   		
+			<!-- Instagram -->
 			<a href="#pmenu2" class="pmenu2-open">
 				<img src = "https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" class="img" width = "75" height = "75">
 			</a>
@@ -178,13 +187,13 @@ include_once 'header.php';
 				<!-- button? -->
 
 				<input type="submit" style="font-size: 24px;" value="submit" >
-				
+
 				<!-- <button style="font-size: 24px;" onclick= "displayNone2();">Submit</button> -->
 			</form>
 		</div>
 	</div>
 	<script type="text/javascript">
-	
+
 	</script>
 	<br>
 
@@ -217,7 +226,7 @@ include_once 'header.php';
 						version    : 'v3.1'
 					});
 
-					FB.AppEvents.logPageView();   
+					FB.AppEvents.logPageView();
 
 				};
 
@@ -265,26 +274,26 @@ include_once 'header.php';
 			<p style="color: white;">Instagram</p>
 			<a href="#pmenu2" class="pmenu-connect" id="visabletext">CONNECT AN ACCOUNT</a>
 			<!-- Connected Account -->
-		
-
-			<button id='visable2' style='font-size: 14px;' onclick='displayShow()'>Account Log</button>	
 
 
+			<button id='visable2' style='font-size: 14px;' onclick='displayShow()'>Account Log</button>
 
-<!----------------------I have Add Some PHP HERE David ------------------------------->
 
-			
+
+<!-----------------I have Add Some PHP HERE David ------------------------------->
+
+
 	<?php
 	// Added this code to check if btn has been submitted and if so display the log button
 				if(isset($_SESSION['insta-btn']) && !empty($_SESSION['insta-btn'])){
 
 					echo "<script>displayNone2(".$_SESSION['insta-btn']."); </script>";
 				}
-				
 
-				
+
+
 			?>
-			
+
 			<br>
 			<div id="visable">
 				<div id="wrapper">
@@ -325,7 +334,7 @@ include_once 'header.php';
 <br>
 <br>
 <br>
-<footer>
+<footer id="footer">
 	<p>iBlinkco, Copyright &copy; 2018</p>
 </footer>
 </html>

@@ -1,7 +1,7 @@
-<?php 
-if(!isset($_SESSION)) { 
-  session_start(); 
-} 
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 </style>
 <head>
@@ -30,7 +30,7 @@ if(!isset($_SESSION)) {
      </div>
      <nav>
      <ul>
-     
+
      <li><a href="about.php"><b>About</b></a></li>
      <li><a href="contactus.php"><b>Contact Us</b></a></li>
      <li><a href="index.php"><b>Home</b></a></li>

@@ -57,7 +57,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	alert("ak");
 	var ak = "<?php echo $_SESSION['accesskey_instagram']; ?>;";
 	var uid = "<?php echo $_SESSION['userid_instagram']; ?>;";
-	
+
 	var userFeed = new Instafeed({
 
 	// iBlinkco
@@ -150,7 +150,7 @@ include_once 'header.php';
 		<div class="pmenu-content">
 			<a href="#" class="pmenu-close">&times;</a>
 			<h2 class="pmenu-heading">CHOOSE A SOCIAL MEDIA ACCOUNT TO CONNECT</h2>
-			<!-- Instagram -->   		
+			<!-- Instagram -->
 			<a href="#pmenu2" class="pmenu2-open">
 				<img src = "https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png" class="img" width = "75" height = "75">
 			</a>
@@ -211,7 +211,7 @@ include_once 'header.php';
 						version    : 'v3.1'
 					});
 
-					FB.AppEvents.logPageView();   
+					FB.AppEvents.logPageView();
 
 				};
 

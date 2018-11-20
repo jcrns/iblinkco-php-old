@@ -51,7 +51,7 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 	#A-visable2{
 		display: none;
 	}
-</style>
+</style>a
 
 <title><?php echo $_SESSION["accesskey-instagram"]; ?> Dashboard - iBlinkco</title>
 <script src="js/instafeed.min.js" type="text/javascript"></script>
